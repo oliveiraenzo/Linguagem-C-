@@ -1,0 +1,72 @@
+using System;
+
+namespace Projeto_21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Projeto 21");
+
+            //Variáveis
+            string data;
+            int dia, mes, ano;
+
+
+            //Entrada de dados
+            Console.Write("Digite uma data no formato DD/MM/AAAA: ");
+            data = Console.ReadLine();
+
+            //Processamento
+            dia = Int32.Parse(data.Substring(0, 2));
+            mes = Int32.Parse(data.Substring(3, 2));
+            ano = Int32.Parse(data.Substring(6, 4));
+
+            //Saída de dados
+            if (ano >= 2000 && ano <= 2099)
+            {
+                if (mes >=1 && mes <= 12)
+                {
+                    if (dia >= 1 && dia <= 31)
+                    {
+                        if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia == 31)  // Se nao colocasse os parentes, iria testar na ordem dos operadores lógicos (Not, And, Or, XOR)
+                        {
+                            Console.Write("Dia 31 para o mes é inválido");
+                        }
+                        else
+                        {
+                            if ( mes == 2 && dia > 29 && ano % 4 == 0)
+                            {
+                                Console.Write("Mes Fev com mais que 29 dias");
+                            }
+                            else
+                            {
+                                if (mes == 2 && dia > 28 && ano % 4 != 0)
+                                {
+                                    Console.Write("Mes Fev com mais que 28 dias");
+                                }
+                                else
+                                {
+                                    Console.Write("Data válida");
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Dia Inválido");
+                    }
+                }
+                else
+                {
+                    Console.Write("Mês Inválido");
+                }
+            }
+            else
+            {
+                Console.Write("Ano Válido!");
+            }
+            Console.ReadKey();
+        }
+    }
+}

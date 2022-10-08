@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Projeto17
+namespace Projeto_17
 {
     class Program
     {
@@ -46,18 +46,9 @@ namespace Projeto17
 
 
             //Ultimas três letras
-            int ultimasLetras = nome.LastIndexOf(' ');
+            int ultimasLetras = nome.Length;
 
-            if (ultimasLetras == -1)
-            {
-                Console.WriteLine("Ultimas tres letras: ........." + nome.Substring(0, 3));
-            }
-            else
-            {
-                Console.WriteLine("Ultimas tres letras:..........." + nome.Substring(ultimasLetras));
-            }
-
-            
+            Console.WriteLine("Ultimas tres letras: ........." + nome.Substring(ultimasLetras - 3));
 
 
             //Calculo INSS
@@ -65,7 +56,7 @@ namespace Projeto17
 
 
             //Tirar os pontos e traços
-            Console.WriteLine(cpf.Replace('-', ' ').Replace('.',' '));
+            Console.WriteLine(cpf.Replace('-', ' ').Replace('.', ' '));
 
 
             Console.ReadKey();

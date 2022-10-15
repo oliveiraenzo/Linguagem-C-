@@ -1,0 +1,26 @@
+using System;
+
+namespace Ex_29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Projeto 29");
+
+            //Variaveis
+            String frase;
+
+            //Entrada de dados
+            Console.WriteLine("Digite uma frase: ");
+            frase = Console.ReadLine();
+
+            //Laço de Repetição
+            for(int posicao = frase.Length -1; posicao >= 0; posicao--)  //Quantas letras eu tenho
+            {
+                Console.WriteLine(frase[posicao]);
+            }
+            Console.ReadKey();
+        }
+    }
+}

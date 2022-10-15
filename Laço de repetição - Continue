@@ -1,0 +1,27 @@
+using System;
+
+namespace Exemplo_For_2
+{
+    class Program
+    {
+        static void Main(string[] args)//
+        {
+            Console.WriteLine("Mostra de 20 a 10 de 1 em 1");
+                //for (int cont = 0; cont <= 10; cont--)
+                for (int cont = 20; cont >= 0; cont = cont - 1)
+                {
+                    if (cont == 13)
+                    {
+                    continue;               //Invalidei o 13
+                    }
+
+                Console.WriteLine($"Numero: {cont}");
+                }
+
+                Console.ReadKey();
+        }
+    }
+}
+
+    
+

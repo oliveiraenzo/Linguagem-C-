@@ -1,0 +1,36 @@
+using System;
+
+namespace ex_28
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Projeto 28"); //Mostra pares e impares de 1 a 1000
+
+            //Variáveis
+            int cont;
+
+
+            //Laço de repetição
+            for (cont = 1; cont <= 1000; cont++)
+            {
+                if (cont % 2 == 0)
+                {
+                    Console.WriteLine($"{cont} é par!");
+                }
+                else
+                {
+                    Console.WriteLine($"{cont} é ímpar!");
+                }
+                if (cont % 100 == 0)
+                {
+                    Console.ReadKey();
+                }
+            }
+            Console.ReadKey();
+
+
+        }
+    }
+}

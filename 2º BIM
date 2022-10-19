@@ -98,4 +98,5 @@ Deixa a string ou char tudo maiúsculo ou tudo minúsculo
 Laço de repetição:
 •	For: é usado quando sabemos quantas vezes o programa será rodado só para contas; (inicialização, teste de permanência e incremento, tudo na mesma linha)
 
-•	While: é usado quando não sabemos o número de vezes que devemos executar um código; (inicialização, teste de permanência 
+•	While: é usado quando não sabemos o número de vezes que devemos executar um código; (inicialização, teste de permanência e incremento em três linhas diferentes);
+(No while, não existe igual (==), sempre usamos o não igual/diferente (!=);

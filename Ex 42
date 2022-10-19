@@ -1,0 +1,33 @@
+
+using System;
+
+namespace Ex_42
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Projeto - 42");
+
+            //Variaveis
+            int codigo, pena;
+            string nome, condenacao;
+
+            //Entrada de dados
+            Console.WriteLine("Digite o nome do detento: ");
+            nome = Console.ReadLine();
+
+            Console.WriteLine("Digite o código do detento: ");
+            codigo = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a condenação do detento: ");
+            condenacao = Console.ReadLine();
+
+            Console.WriteLine("Digite a pena do detento: ");
+            pena = int.Parse(Console.ReadLine());
+
+
+
+        }
+    }
+}

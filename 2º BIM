@@ -1,0 +1,101 @@
+2º BIMESTRE
+
+Tipo de dado String:
+
+Toda string é um conjunto de char;
+Conseguimos acessar cada uma das letras dentro da string;
+O espaço é um caractere;
+Cada letra tem uma posição (0 ao final da string);
+
+PARA EXIBIR UM DETERMINADO CARACTERE FAÇA:
+
+“Console.Write ( nome [0] ); ”
+“Console.Write ( nome [4] ); ”
+“Console.Write ( “Letras {0} {1} {2}”, nome [0], nome [4], nome [8] ); ”
+
+Concatenar é somar duas ou mais strings:
+“Podemos concatenar somente string”
+
+String parte1 = “Brasil é o ”;
+String parte2 = “país do futebol ”;
+String parte3 = parte1 + parte2;
+Console.WriteLine( parte3 );    // Brasil é o país do futebol 
+
+
+Tipo char:
+No char podemos colocar somente uma letra, porém somente com aspas simples ‘  ’;
+
+char letra = ‘A’;
+
+Cast: 
+
+Int numero;
+numero = (int) 10.87;      		  //Perde precisão, manda os 0.87 pro espaço
+Propriedade Lenght: (Quantidade de caracteres dentro da string)
+Devolve quantas letras eu tenho dentro da string;
+String nome = “Ana Silvia”;      //Possui 10 caracteres
+Int quantidade = nome.Lenght;
+Console.Write (“O nome possui {0} caracteres”, quantidade);  // será exibido: 10
+Console.Write (“Ultima letra do nome {0}”, nome [quantidade -1] );  // será exibido: a
+
+Método Substring: ,
+Copia uma parte da string;,
+
+String nome “Ana Silvia”;  // Possui 10 caracteres
+String primeiroNome = nome.Substring (0, 3);
+Console.WriteLine (primeiroNome);  //Será exibido Ana
+
+
+
+
+
+
+Método IndexOf:
+
+Pesquisa dentro do texto, char ou string e devolve o número da posição;
+
+           String nome = "Ana Maria";
+            //             012345678
+
+            Console.WriteLine("Primeiro ‘a’: { 0}", nome.IndexOf('a'));
+            Console.WriteLine("Último ‘a’: { 0}", nome.LastIndexOf ('a'));
+
+
+            int primeiro = nome.IndexOf('a');
+
+            Console.WriteLine("Meio ‘a’: { 0}", nome.IndexOf('a', primeiro + 1));
+
+            //                             OU 
+
+Console.WriteLine("Meio ‘a’: { 0}", nome.IndexOf('a', nome.IndexOf('a')));
+			
+Quando o que eu estou procurando, e aparece -1, não existe;
+Método Replace:
+
+Pega um determinado valor, char ou string e troca por outro char/string dentro de uma string
+
+String data = “25-10-2012’;
+Console.WriteLine ( data.Replace (‘ - ‘, ‘ / ’) );
+
+data = data.Replace (‘ - ‘ , ‘ / ‘);
+Console.WriteLine (data);
+
+Método Remove:
+
+Apaga uma determinada parte da string
+
+String data = “25-10-2012”;
+Console.WriteLine (data.Remove (6, 2));     //Será exibido 25-10-12n
+
+
+Break: encerra o laço;
+Continue: Volta para início do laço;
+
+
+.ToLower( ) // .ToUpper( ) 
+Deixa a string ou char tudo maiúsculo ou tudo minúsculo
+
+Laço de repetição:
+•	For: é usado quando sabemos quantas vezes o programa será rodado só para contas; (inicialização, teste de permanência e incremento, tudo na mesma linha)
+
+•	While: é usado quando não sabemos o número de vezes que devemos executar um código; (inicialização, teste de permanência 

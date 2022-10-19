@@ -1,0 +1,35 @@
+using System;
+
+namespace Projeto_31
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Projeto 31");
+
+            //Variáveis
+            string frase;
+            char letra;
+            int quantidade = 0;
+
+            //Entrada de dados
+            Console.WriteLine("Digite uma frase: ");
+            frase = Console.ReadLine();
+
+            Console.WriteLine("Digite uma letra: ");
+            letra = Console.ReadLine()[0];              // [0] Pega somente a primeira letra do que for digitado
+
+            //Laço de repetição
+            for (int pos = 0; pos < frase.Length; pos++)
+            {
+                if (frase[pos] == letra) quantidade++;
+            }
+
+            //Saída de dados
+            Console.WriteLine($"A letra {letra} aparece na frase {quantidade} vezes. ");
+
+            Console.ReadKey();
+        }
+    }
+}

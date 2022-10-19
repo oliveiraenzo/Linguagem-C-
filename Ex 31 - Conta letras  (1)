@@ -1,0 +1,37 @@
+
+
+using System;
+
+namespace _31_ex
+{
+    class Program
+    {
+        static void Main(string[] args) //1//
+        {
+                Console.WriteLine("Projeto 31");
+
+                //Variáveis
+                string frase;
+                char letra;
+                int quantidade = 0;
+
+                //Entrada de dados
+                Console.WriteLine("Digite uma frase: ");
+                frase = Console.ReadLine().ToLower();       //.ToLower() deixa tudo minúsculo ou .ToUpper() deixa tudo maíusculo
+
+                Console.WriteLine("Digite uma letra: ");
+                letra = Console.ReadLine().ToLower()[0];              // [0] Pega somente a primeira letra do que for digitado
+
+                //Laço de repetição
+                for (int pos = 0; pos < frase.Length; pos++)
+                {
+                    if (frase[pos] == letra) quantidade++;
+                }
+
+                //Saída de dados
+                Console.WriteLine($"A letra {letra} aparece na frase {quantidade} vezes. ");
+
+                Console.ReadKey();
+            }
+        }
+    }

@@ -100,3 +100,6 @@ Laço de repetição:
 
 •	While: é usado quando não sabemos o número de vezes que devemos executar um código; (inicialização, teste de permanência e incremento em três linhas diferentes);
 (No while, não existe igual (==), sempre usamos o não igual/diferente (!=);
+
+
+Switch: quando comparamos uma unica variavel com varios valores sempre de igualdade;

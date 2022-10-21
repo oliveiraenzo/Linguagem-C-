@@ -1,17 +1,18 @@
-
 using System;
 
-namespace Ex_42
+namespace EX_42
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Projeto - 42");
+            Console.WriteLine("Projeto 42");
 
-            //Variaveis
+            //Variáveis
             int codigo, pena;
             string nome, condenacao;
+            char maisUm;
+
 
             //Entrada de dados
             Console.WriteLine("Digite o nome do detento: ");
@@ -26,6 +27,23 @@ namespace Ex_42
             Console.WriteLine("Digite a pena do detento: ");
             pena = int.Parse(Console.ReadLine());
 
+            //Loop
+            maisUm = 'S';
+            while (codigo > 0 && nome.Length > 1 && condenacao.Length >= 5 && pena > 1 || pena < 500)
+            {
+                Console.WriteLine($"Código:         {codigo}");
+                Console.WriteLine($"Nome:           {nome}");
+                Console.WriteLine($"Condenação:     {condenacao}");
+                Console.WriteLine($"Pena:           {pena}");
+
+                Console.WriteLine("Deseja cadastrar mais um?");
+                maisUm = char.Parse(Console.ReadLine().ToUpper());
+                if (maisUm != 'S')
+                {
+                    break;
+                }
+            }
+            Console.ReadKey();
 
 
         }

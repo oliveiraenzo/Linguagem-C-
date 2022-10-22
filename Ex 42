@@ -1,6 +1,6 @@
 using System;
 
-namespace EX_42
+namespace ex_42
 {
     class Program
     {
@@ -13,39 +13,74 @@ namespace EX_42
             string nome, condenacao;
             char maisUm;
 
+            maisUm = 's'; 
+            while (maisUm == 's' || maisUm == 'S')
+            {                  
 
-            //Entrada de dados
-            Console.WriteLine("Digite o nome do detento: ");
-            nome = Console.ReadLine();
-
-            Console.WriteLine("Digite o código do detento: ");
-            codigo = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Digite a condenação do detento: ");
-            condenacao = Console.ReadLine();
-
-            Console.WriteLine("Digite a pena do detento: ");
-            pena = int.Parse(Console.ReadLine());
-
-            //Loop
-            maisUm = 'S';
-            while (codigo > 0 && nome.Length > 1 && condenacao.Length >= 5 && pena > 1 || pena < 500)
-            {
-                Console.WriteLine($"Código:         {codigo}");
-                Console.WriteLine($"Nome:           {nome}");
-                Console.WriteLine($"Condenação:     {condenacao}");
-                Console.WriteLine($"Pena:           {pena}");
-
-                Console.WriteLine("Deseja cadastrar mais um?");
-                maisUm = char.Parse(Console.ReadLine().ToUpper());
-                if (maisUm != 'S')
+                codigo = 0;
+                while (codigo <= 0)
                 {
-                    break;
+
+                    Console.WriteLine("Digite codigo do detento: ");
+                    codigo = int.Parse(Console.ReadLine());
+
+                    if (codigo <= 0)
+                        Console.WriteLine("Código Inválido");
+
                 }
+
+                nome = "";
+                while (nome.Length < 1)
+                {
+                    Console.WriteLine("Digite o nome do detento");
+                    nome = Console.ReadLine();
+
+                    if (nome.Length < 1)
+                    {
+                        Console.WriteLine("Nome Indválido");
+                    }
+                }
+
+                condenacao = "";
+                while (condenacao.Length < 1)
+                {
+                    Console.WriteLine("Digite a condenação do detento");
+                    condenacao = Console.ReadLine();
+
+                    if (condenacao.Length < 1)
+                    {
+                        Console.WriteLine("Condenação Inválida");
+                    }
+                }
+
+                pena = 0;
+                while (pena <= 1 || pena >= 500)
+                {
+                    Console.WriteLine("Digite a pena do detento");
+                    pena = int.Parse(Console.ReadLine());
+
+                    if (pena <= 1 || pena >= 500)
+                    {
+                        Console.WriteLine("Pena Inválida");
+                    }
+                }
+
+
+                Console.WriteLine($"Código:             {codigo}.");
+                Console.WriteLine($"Nome:               {nome}.");
+                Console.WriteLine($"Condenação:         {condenacao}.");
+                Console.WriteLine($"Pena:               {pena}.");
+                    
+
+                Console.WriteLine("Deseja cadastrar outro detento (S/N)");
+                maisUm = Console.ReadLine()[0];
+
+                //para limpar a tela
+                Console.Clear();
             }
+
+
             Console.ReadKey();
-
-
         }
     }
 }

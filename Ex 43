@@ -1,0 +1,93 @@
+using System;
+
+namespace Ex_43
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Projeto 43");
+
+            //Variaveis
+            int codigo;
+            string descricao, tipo, continuar;
+            char S, H;
+            double valor;
+
+            continuar = "";
+            while (continuar != "sim")
+            {
+                codigo = 0;
+                while (codigo <= 0 || codigo >= 500)
+                {
+                    Console.WriteLine("Digite o código do produto: ");
+                    codigo = int.Parse(Console.ReadLine());
+
+                    if (codigo <= 0 || codigo >= 500)
+                    {
+                        Console.WriteLine("Código Inválido!");
+                    }
+                }
+
+                descricao = "";
+                while (descricao.Length < 3)
+                {
+                    Console.WriteLine("Digite a descrição do produto: ");
+                    descricao = Console.ReadLine();
+
+                    if (descricao.Length < 3)
+                    {
+                        Console.WriteLine("Descrição inválida!");
+                    }
+                }
+
+                valor = 0;
+                while (valor <= 0)
+                {
+                    Console.WriteLine("Digite o valor do produto: ");
+                    valor = double.Parse(Console.ReadLine());
+
+                    if (valor <= 0)
+                    {
+                        Console.WriteLine("Valor Inválido!");
+                    }
+                }
+
+
+                /*S = 'S';
+                H = 'H';
+                while (S == 'S' && H == 'H')
+                {
+                    Console.WriteLine("Digite o tipo do produto (Hardware ou Software): ");
+                    tipo = Console.ReadLine().ToUpper();
+
+                    /if (tipo.Length == 'S')
+                    {
+                        tipo == S;
+                    }
+                    else
+                    {
+                        if (tipo.Length == 'H')
+                        {
+                            tipo == H;
+                        }
+                    }
+                }*/
+
+                Console.WriteLine($"Codigo: {codigo}  -  Descrição: {descricao}  -  Valor:  R${valor} reais  - Tipo: ");
+                Console.WriteLine("");
+
+                Console.WriteLine("Deseja continuar?");
+                continuar = Console.ReadLine().ToLower();
+
+
+                if (continuar == "nao")
+                {
+                    Console.ReadKey();
+                }
+            }
+            Console.ReadKey();
+
+        }
+    }
+}

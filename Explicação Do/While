@@ -1,0 +1,33 @@
+using System;
+
+namespace Do_While
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Do - While");
+
+            int cont = 100, idade;
+
+            //Contar de 1 a 10
+            do
+            {
+                Console.WriteLine($"Número: {cont}");
+                cont++;
+            } while (cont <= 10);
+
+
+            //fazendo validação de uma idade que tem que ser maior ou igual a 0
+            do
+            {
+                Console.WriteLine("Digite a idade: ");
+                idade = int.Parse(Console.ReadLine());
+            } while (idade <= 0);
+
+
+            Console.ReadKey();
+        }
+
+    }
+}

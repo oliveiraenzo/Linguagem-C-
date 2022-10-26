@@ -10,20 +10,20 @@ namespace Ex_43
 
             //Variaveis
             int codigo;
-            string descricao, tipo, continuar;
-            char S, H;
+            string descricao, continuar;
+            char tipo;
             double valor;
 
-            continuar = "";
-            while (continuar != "sim")
+            continuar = "sim";
+            while (continuar == "sim")
             {
-                codigo = 0;
-                while (codigo <= 0 || codigo >= 500)
+                codigo = -1;
+                while (codigo < 0 || codigo > 500)
                 {
                     Console.WriteLine("Digite o código do produto: ");
                     codigo = int.Parse(Console.ReadLine());
 
-                    if (codigo <= 0 || codigo >= 500)
+                    if (codigo < 0 || codigo > 500)
                     {
                         Console.WriteLine("Código Inválido!");
                     }
@@ -54,40 +54,32 @@ namespace Ex_43
                 }
 
 
-                /*S = 'S';
-                H = 'H';
-                while (S == 'S' && H == 'H')
+                tipo = 'x';
+                while (tipo != 'S' && tipo != 'H')
                 {
                     Console.WriteLine("Digite o tipo do produto (Hardware ou Software): ");
-                    tipo = Console.ReadLine().ToUpper();
+                    tipo = char.ToUpper(Console.ReadLine()[0]);
 
-                    /if (tipo.Length == 'S')
+                    if (tipo != 'S' && tipo != 'H')
                     {
-                        tipo == S;
+                        Console.WriteLine("Tipo Inválido");
                     }
-                    else
-                    {
-                        if (tipo.Length == 'H')
-                        {
-                            tipo == H;
-                        }
-                    }
-                }*/
+                }
 
-                Console.WriteLine($"Codigo: {codigo}  -  Descrição: {descricao}  -  Valor:  R${valor} reais  - Tipo: ");
+                string TipoStr = "Hardware";
+                if (tipo == 'S')
+                {
+                    TipoStr = "Software";
+                }
+
+                Console.WriteLine($"Codigo: {codigo}  -  Descrição: {descricao}  -  Valor:  R${valor} reais  - Tipo: {TipoStr}");
                 Console.WriteLine("");
 
                 Console.WriteLine("Deseja continuar?");
                 continuar = Console.ReadLine().ToLower();
 
-
-                if (continuar == "nao")
-                {
-                    Console.ReadKey();
-                }
             }
             Console.ReadKey();
-
         }
     }
 }

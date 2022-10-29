@@ -108,3 +108,8 @@ Switch: quando comparamos uma unica variavel com varios valores sempre de iguald
 Vetores e Matrizes
 Variável vetorial/vetor, uma variável vai conseguir armazenar várias informações, todas do mesmo tipo;
 
+Para criar vetor: 
+		
+		String[ ] vetor = new string [ 5 ];
+			
+Tipo de dado	nome do vetor	Reserva memoria p/ vetor   QTD de posições

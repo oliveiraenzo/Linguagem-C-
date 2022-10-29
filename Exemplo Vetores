@@ -1,0 +1,58 @@
+using System;
+
+namespace Aula_2810_Exemplo_Vetores
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Cria um vetor de 5 Strings
+            String[] nomes = new string[5];
+
+            //Cria um vetor de 3 inteiros
+            Int32[] numeros = new Int32[3];
+
+            //Cria um vetor de 2 doubles (salario) e ja coloca valor
+            double[] salarios = { 1590.99, 3400.00 };
+
+            //Para atribuir um dado fixo
+            nomes[0] = "João";
+
+            //Para atribuir um dado do usuario 
+            numeros[2] = Convert.ToInt32(Console.ReadLine());
+
+
+            int pos = 2;
+            nomes[pos] = Console.ReadLine();
+
+
+            //Entrada de dados automatica
+            for (int p = 0; p < nomes.Length; p++)
+            {
+                Console.WriteLine($"Digite o Nome [{p + 1}]:");
+                nomes[p] = Console.ReadLine();
+            }
+
+            /*Não funciona para exibir os dados de nomes
+            
+            Console.WriteLine(nomes);
+            Console.WriteLine(nomes[]);
+
+            */
+
+
+            //Para exibir todos os nomes precisa de um laço de repetição
+            for (int p = 0; p < nomes.Length; p++)
+            {
+                Console.WriteLine($"Nomes [{p + 1}]: {nomes [p]}]");
+            }
+
+            //Outra forma
+            foreach(String p in nomes)
+            {
+                Console.WriteLine($"Nomes: {p}");
+            }
+
+        }
+    }
+}

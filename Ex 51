@@ -1,0 +1,39 @@
+using System;
+
+namespace Ex_51
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Projeto 51");
+
+            //Vetores
+            String[] nomes = new string [5];
+            double[] salario = new double[5];
+
+
+            //Entrada de dados automático
+            for (int aux = 0; aux < nomes.Length; aux++)
+            {
+                Console.WriteLine($"Digite o Nome: {aux + 1}:");
+                nomes[aux] = Console.ReadLine();
+            }
+
+            for (int sal = 0; sal < salario.Length; sal++)
+            {
+                Console.WriteLine($"Digite o salário: {sal + 1}: ");
+                salario[sal] = double.Parse(Console.ReadLine());
+            }
+
+
+            //Saída de dados Automático
+            for (int aux = 0; aux < nomes.Length; aux++)
+            {
+                Console.WriteLine($"Nomes [{aux+1}]: {nomes[aux]} e Salário [")
+            }
+
+
+        }
+    }
+}

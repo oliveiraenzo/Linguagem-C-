@@ -1,6 +1,6 @@
 using System;
 
-namespace Ex_51
+namespace Ex51
 {
     class Program
     {
@@ -9,7 +9,7 @@ namespace Ex_51
             Console.WriteLine("Projeto 51");
 
             //Vetores
-            String[] nomes = new string [5];
+            String[] nomes = new string[5];
             double[] salario = new double[5];
 
 
@@ -18,22 +18,21 @@ namespace Ex_51
             {
                 Console.WriteLine($"Digite o Nome: {aux + 1}:");
                 nomes[aux] = Console.ReadLine();
+
+                Console.WriteLine($"Digite o salário: {aux + 1}: ");
+                salario[aux] = double.Parse(Console.ReadLine());
+
             }
 
-            for (int sal = 0; sal < salario.Length; sal++)
-            {
-                Console.WriteLine($"Digite o salário: {sal + 1}: ");
-                salario[sal] = double.Parse(Console.ReadLine());
-            }
 
 
             //Saída de dados Automático
             for (int aux = 0; aux < nomes.Length; aux++)
             {
-                Console.WriteLine($"Nomes [{aux+1}]: {nomes[aux]} e Salário [")
+                Console.WriteLine($"Nomes [{aux + 1}]: {nomes[aux]} e Salário [{aux + 1}]: {salario[aux]}");
             }
 
-
+            Console.ReadKey();
         }
     }
 }

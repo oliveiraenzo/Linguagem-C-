@@ -1,0 +1,23 @@
+using System;
+
+namespace Exemplo_numero_randomicos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Gerando números randomicos");
+
+            //criar objeto para geração
+            Random rnd = new Random();
+
+            for (int i=0; i<5; i++)
+            {
+                Console.WriteLine("Gerado: " + rnd.Next(1, 50));            //Next = inteiro     NextDouble = Decimais      NextBytes = Bytes
+
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

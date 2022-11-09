@@ -1,0 +1,60 @@
+using System;
+
+namespace Ex56
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Exericio 56");
+
+            //Vetores
+            String[] nomes = new string[50];
+            double[] salarios = new double[50];
+            Int16 qtdCadastrado = 0;
+            String resp;
+            double menorSalario = 0;
+
+            //entrada de dados
+            do
+            {
+                //adiciona 1 na quantidade de cadastrados 
+                qtdCadastrado++;
+                Console.Write($"Nome [{qtdCadastrado}]: ");
+                nomes[qtdCadastrado - 1] = Console.ReadLine();
+                
+
+                do
+                {
+
+                    Console.Write($"Salários [{qtdCadastrado}]: ");
+                    salarios[qtdCadastrado] = Double.Parse(Console.ReadLine());
+
+
+                    Console.Write("Deseja cadastrar outro (S/N): ");
+                    resp = Console.ReadLine();
+
+                } while (salarios[qtdCadastrado - 1] < 0 || salarios[qtdCadastrado - 1] > 15000);
+
+
+
+                Console.Write("Deseja cadastrar outro (S/N): ");
+                resp = Console.ReadLine();
+
+            } while (resp.ToUpper()[0] == 'S');
+
+            //descobrindo o menor salario
+            menorSalario = salarios[0];
+            for (int pos = 0; pos < qtdCadastrado; pos++)
+            {
+                if (salarios[pos] < menorSalario)
+                {
+                    menorSalario = salarios[pos];
+                }
+            }
+
+            Console.ReadKey();
+        }
+
+    }
+}
